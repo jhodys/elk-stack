@@ -265,3 +265,13 @@ Kemudian tambahkan beberapa panel lagi
 Berikut adalah hasil panel yang baru ditambahkan pada baris kedua dashboard ini
 
 ![](https://github.com/jhodys/elk-stack/blob/main/Screenshots/Visualization%20of%20pod05-client%20resource%20usage/23.png)
+
+Tambahkan dua panel lagi untuk baris ketiga di dashboard
+
+![](https://github.com/jhodys/elk-stack/blob/main/Screenshots/Visualization%20of%20pod05-client%20resource%20usage/24.png)
+
+![](https://github.com/jhodys/elk-stack/blob/main/Screenshots/Visualization%20of%20pod05-client%20resource%20usage/25.png)
+
+Berikut adalah hasil panel yang sudah ditambahkan
+
+![](https://github.com/jhodys/elk-stack/blob/main/Screenshots/Visualization%20of%20pod05-client%20resource%20usage/26.png)
