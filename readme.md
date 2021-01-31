@@ -8,4 +8,4 @@ ELK Stack memerlukan java untuk bisa berjalan dengan baik. Berikut ini command y
 ```
 sudo apt install openjdk-11-jre apt-transport-https
 ```
-!https://github.com/jhodys/elk-stack/blob/main/Screenshots/Elasticsearch%20install%20%26%20configuration/1.png
+!(https://github.com/jhodys/elk-stack/blob/main/Screenshots/Elasticsearch%20install%20%26%20configuration/1.png)
