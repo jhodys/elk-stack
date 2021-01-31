@@ -115,6 +115,6 @@ ssh -v -L 5601:127.0.0.1:5601 student@138.201.60.4 -p 10510
 
 ![](https://github.com/jhodys/elk-stack/blob/main/Screenshots/Kibana%20install%20%26%20configuration/5.png)
 
-Kemudian buka halaman website localhost:5601 pada browser
+Kemudian buka halaman website http://localhost:5601 pada browser
 
 ![](https://github.com/jhodys/elk-stack/blob/main/Screenshots/Kibana%20install%20%26%20configuration/6.png)
