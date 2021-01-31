@@ -275,3 +275,93 @@ Tambahkan dua panel lagi untuk baris ketiga di dashboard
 Berikut adalah hasil panel yang sudah ditambahkan
 
 ![](https://github.com/jhodys/elk-stack/blob/main/Screenshots/Visualization%20of%20pod05-client%20resource%20usage/26.png)
+
+## Step 7: Membuat Visualisasi Dari Raw Log
+
+Berikut ini adalah hasil dari raw log yang sudah diolah ke file csv yang ada di https://github.com/jhodys/elk-stack/blob/main/log/paymentlog.csv. Sebagian menggunakan data screenshots technical test yang diberikan
+
+![](https://github.com/jhodys/elk-stack/blob/main/Screenshots/Raw%20log%20visualization/1.png)
+
+Untuk membuat visualisasi dari file log ini saya menggunakan fitur machine learning pada Kibana
+
+![](https://github.com/jhodys/elk-stack/blob/main/Screenshots/Raw%20log%20visualization/2.png)
+
+Kemudian import data dengan cara upload file
+
+![](https://github.com/jhodys/elk-stack/blob/main/Screenshots/Raw%20log%20visualization/3.png)
+
+Pilih select atau drag & drop
+
+![](https://github.com/jhodys/elk-stack/blob/main/Screenshots/Raw%20log%20visualization/4.png)
+
+Kemudian klik import
+
+![](https://github.com/jhodys/elk-stack/blob/main/Screenshots/Raw%20log%20visualization/5.png)
+
+Pilih bagian advanced dan berikan nama index yang akan digunakan
+
+![](https://github.com/jhodys/elk-stack/blob/main/Screenshots/Raw%20log%20visualization/6.png)
+
+Kemudian klik import
+
+![](https://github.com/jhodys/elk-stack/blob/main/Screenshots/Raw%20log%20visualization/7.png)
+
+Tunggu sampai output import complete
+
+![](https://github.com/jhodys/elk-stack/blob/main/Screenshots/Raw%20log%20visualization/8.png)
+
+Lanjut ke-dashboard create new dashboard lalu buat panel visualisasi data tabel, untuk source pilih nama index yang sudah di import tadi
+
+![](https://github.com/jhodys/elk-stack/blob/main/Screenshots/Raw%20log%20visualization/9.png)
+
+Lalu sesuaikan seperti gambar-gambar berikut
+
+![](https://github.com/jhodys/elk-stack/blob/main/Screenshots/Raw%20log%20visualization/10.png)
+
+![](https://github.com/jhodys/elk-stack/blob/main/Screenshots/Raw%20log%20visualization/11.png)
+
+![](https://github.com/jhodys/elk-stack/blob/main/Screenshots/Raw%20log%20visualization/12.png)
+
+![](https://github.com/jhodys/elk-stack/blob/main/Screenshots/Raw%20log%20visualization/13.png)
+
+![](https://github.com/jhodys/elk-stack/blob/main/Screenshots/Raw%20log%20visualization/14.png)
+
+![](https://github.com/jhodys/elk-stack/blob/main/Screenshots/Raw%20log%20visualization/15.png)
+
+![](https://github.com/jhodys/elk-stack/blob/main/Screenshots/Raw%20log%20visualization/16.png)
+
+![](https://github.com/jhodys/elk-stack/blob/main/Screenshots/Raw%20log%20visualization/17.png)
+
+![](https://github.com/jhodys/elk-stack/blob/main/Screenshots/Raw%20log%20visualization/18.png)
+
+![](https://github.com/jhodys/elk-stack/blob/main/Screenshots/Raw%20log%20visualization/19.png)
+
+Kemudian save visualization
+
+![](https://github.com/jhodys/elk-stack/blob/main/Screenshots/Raw%20log%20visualization/20.png)
+
+Berikut adalah hasil panel yang dibuat
+
+![](https://github.com/jhodys/elk-stack/blob/main/Screenshots/Raw%20log%20visualization/21.png)
+
+Kemudian save dashboard
+
+![](https://github.com/jhodys/elk-stack/blob/main/Screenshots/Raw%20log%20visualization/22.png)
+
+Lanjut dengan membuat panel bergaya pie seperti gambar-gambar berikut
+
+![](https://github.com/jhodys/elk-stack/blob/main/Screenshots/Raw%20log%20visualization/23.png)
+
+![](https://github.com/jhodys/elk-stack/blob/main/Screenshots/Raw%20log%20visualization/24.png)
+
+![](https://github.com/jhodys/elk-stack/blob/main/Screenshots/Raw%20log%20visualization/25.png)
+
+![](https://github.com/jhodys/elk-stack/blob/main/Screenshots/Raw%20log%20visualization/26.png)
+
+![](https://github.com/jhodys/elk-stack/blob/main/Screenshots/Raw%20log%20visualization/27.png)
+
+![](https://github.com/jhodys/elk-stack/blob/main/Screenshots/Raw%20log%20visualization/28.png)
+
+Berikut adalah hasil final dari panel yang sudah dibuat
+
+![](https://github.com/jhodys/elk-stack/blob/main/Screenshots/Raw%20log%20visualization/29.png)
