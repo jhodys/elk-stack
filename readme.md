@@ -30,6 +30,7 @@ Install Elasticsearch
 ```
 sudo apt-get update && sudo apt-get install elasticsearch
 ```
+![](https://github.com/jhodys/elk-stack/blob/main/Screenshots/Elasticsearch%20install%20%26%20configuration/2.png)
 
 Kemudian jalankan Elasticsearch
 
@@ -39,4 +40,4 @@ sudo systemctl start elasticsearch
 sudo systemctl status elasticsearch
 ```
 
-![](https://github.com/jhodys/elk-stack/blob/main/Screenshots/Elasticsearch%20install%20%26%20configuration/2.png)
+![](https://github.com/jhodys/elk-stack/blob/main/Screenshots/Elasticsearch%20install%20%26%20configuration/3.png)
