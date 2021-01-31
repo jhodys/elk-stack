@@ -51,3 +51,21 @@ curl -X GET "localhost:9200/?pretty"
 Yang akan memberikan output seperti ini
 
 ![](https://github.com/jhodys/elk-stack/blob/main/Screenshots/Elasticsearch%20install%20%26%20configuration/4.png)
+
+Lanjut ke konfigurasi file elasticsearch.yml
+
+```
+sudo nano /etc/elasticsearch/elasticsearch.yml
+```
+
+Kemudian edit dan uncheck bagian network.host http.port dan discovery.seed_hosts seperti berikut
+
+![](https://github.com/jhodys/elk-stack/blob/main/Screenshots/Elasticsearch%20install%20%26%20configuration/5.png)
+
+Setelah di-save restart Elasticsearch dengan perintah berikut
+
+```
+sudo systemctl restart elasticsearch
+```
+
+![](https://github.com/jhodys/elk-stack/blob/main/Screenshots/Elasticsearch%20install%20%26%20configuration/6.png)
