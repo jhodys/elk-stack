@@ -28,7 +28,7 @@ echo "deb https://artifacts.elastic.co/packages/7.x/apt stable main" | sudo tee 
 Install Elasticsearch
 
 ```
-sudo apt-get update && sudo apt-get install elasticsearch
+sudo apt-get update && sudo apt-get install elasticsearch -y
 ```
 ![](https://github.com/jhodys/elk-stack/blob/main/Screenshots/Elasticsearch%20install%20%26%20configuration/2.png)
 
@@ -69,3 +69,52 @@ sudo systemctl restart elasticsearch
 ```
 
 ![](https://github.com/jhodys/elk-stack/blob/main/Screenshots/Elasticsearch%20install%20%26%20configuration/6.png)
+
+## Step 3: Instalasi dan Konfigurasi Kibana pada pod05-elk
+
+Gunakan command berikut untuk melakukan instalasi
+
+```
+sudo apt-get install kibana -y
+```
+
+![](https://github.com/jhodys/elk-stack/blob/main/Screenshots/Kibana%20install%20%26%20configuration/1.png)
+
+Konfigurasi parameter server.hosts di Kibana.yml
+
+```
+sudo nano /etc/kibana/kibana.yml
+```
+
+![](https://github.com/jhodys/elk-stack/blob/main/Screenshots/Kibana%20install%20%26%20configuration/2.png)
+
+Kemudian jalankan Kibana dengan command berikut
+
+```
+sudo systemctl enable kibana
+sudo systemctl start kibana
+sudo systemctl status kibana
+```
+
+![](https://github.com/jhodys/elk-stack/blob/main/Screenshots/Kibana%20install%20%26%20configuration/3.png)
+
+Gunakan netstat untuk melihat port Elasticsearch dan Kibana apakah sudah berjalan dengan baik
+
+```
+sudo apt install net-tools -y
+netstat -tulpn | grep "9200\|5601"
+```
+
+![](https://github.com/jhodys/elk-stack/blob/main/Screenshots/Kibana%20install%20%26%20configuration/4.png)
+
+Untuk akses tampilan web Kibana menggunakan port 5601 yang bisa diakses melalui ssh tunnel dengan command berikut
+
+```
+ssh -v -L 5601:127.0.0.1:5601 student@138.201.60.4 -p 10510
+```
+
+![](https://github.com/jhodys/elk-stack/blob/main/Screenshots/Kibana%20install%20%26%20configuration/5.png)
+
+Kemudian buka halaman website localhost:5601 pada browser
+
+![](https://github.com/jhodys/elk-stack/blob/main/Screenshots/Kibana%20install%20%26%20configuration/6.png)
