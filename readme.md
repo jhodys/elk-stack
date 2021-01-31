@@ -185,3 +185,83 @@ sudo systemctl status metricbeat
 Untuk melihat hasil dashboard yang sudah di load buka halaman http://localhost:5601/app/kibana#/dashboard/Metricbeat-system-overview-ecs. Dashboard ini menampilkan hasil monitoring pada pod05-client secara instan tanpa perlu membuat dashboard.
 
 ![](https://github.com/jhodys/elk-stack/blob/main/Screenshots/Metricbeat%20install%20%26%20configuration/6.png)
+
+## Step 6: Membuat Dashboard dan Visualisasi Penggunaan Resource pod05-client Pada Kibana
+
+Pada bagian navigasi klik dashboard untuk beralih ke menu dashboard
+
+![](https://github.com/jhodys/elk-stack/blob/main/Screenshots/Visualization%20of%20pod05-client%20resource%20usage/1.png)
+
+Di menu dashboard klik create dashboard
+
+![](https://github.com/jhodys/elk-stack/blob/main/Screenshots/Visualization%20of%20pod05-client%20resource%20usage/2.png)
+
+Kemudian klik create new untuk membuat visualisasi
+
+![](https://github.com/jhodys/elk-stack/blob/main/Screenshots/Visualization%20of%20pod05-client%20resource%20usage/3.png)
+
+Pada new visualization pilih metric sebagai template visualisasi
+
+![](https://github.com/jhodys/elk-stack/blob/main/Screenshots/Visualization%20of%20pod05-client%20resource%20usage/4.png)
+
+Untuk source-nya pilih metricbeat-* untuk mendapatkan metrik yang ada pada pod05-client
+
+![](https://github.com/jhodys/elk-stack/blob/main/Screenshots/Visualization%20of%20pod05-client%20resource%20usage/5.png)
+
+Pada bagian "Data>Metric>Aggregation" gunakan max dan pada bagian field ketikan system.uptime.duration.ms untuk custom label sesuaikan. Kemudian klik update lalu save
+
+![](https://github.com/jhodys/elk-stack/blob/main/Screenshots/Visualization%20of%20pod05-client%20resource%20usage/6.png)
+
+Sesuaikan bagian title kemudian klik save & return
+
+![](https://github.com/jhodys/elk-stack/blob/main/Screenshots/Visualization%20of%20pod05-client%20resource%20usage/7.png)
+
+Berikut adalah panel yang sudah dibuat untuk memonitor Up Time pada pod05-client
+
+![](https://github.com/jhodys/elk-stack/blob/main/Screenshots/Visualization%20of%20pod05-client%20resource%20usage/8.png)
+
+Klik save dashboard kemudian berikan title dan klik save untuk menyimpan hasil visualisasi pada dashboard
+
+![](https://github.com/jhodys/elk-stack/blob/main/Screenshots/Visualization%20of%20pod05-client%20resource%20usage/10.png)
+
+Lanjut untuk membuat panel jumlah core prosesor pod05-client dengan mengklik edit pada dashboard yang sudah di save kemudian sesuaikan seperti gambar berikut
+
+![](https://github.com/jhodys/elk-stack/blob/main/Screenshots/Visualization%20of%20pod05-client%20resource%20usage/11.png)
+
+Untuk menghilangkan margins diantara panel klik option kemudian uncheck "Use margins between panels"
+
+![](https://github.com/jhodys/elk-stack/blob/main/Screenshots/Visualization%20of%20pod05-client%20resource%20usage/12.png)
+
+Kemudian tambahkan beberapa panel seperti digambar berikut
+
+![](https://github.com/jhodys/elk-stack/blob/main/Screenshots/Visualization%20of%20pod05-client%20resource%20usage/13.png)
+
+![](https://github.com/jhodys/elk-stack/blob/main/Screenshots/Visualization%20of%20pod05-client%20resource%20usage/14.png)
+
+Untuk menambahkan informasi inbound traffic bisa menggunakan panel yang sudah jadi yang di load dari Metricbeat dengan cara mengklik add kemudian search keyword inbound kemudian klik opsi yang ada [Metricbeat System]
+
+![](https://github.com/jhodys/elk-stack/blob/main/Screenshots/Visualization%20of%20pod05-client%20resource%20usage/15.png)
+
+Untuk panel outbound traffic
+
+![](https://github.com/jhodys/elk-stack/blob/main/Screenshots/Visualization%20of%20pod05-client%20resource%20usage/16.png)
+
+Berikut adalah hasil panel yang ditambahkan
+
+![](https://github.com/jhodys/elk-stack/blob/main/Screenshots/Visualization%20of%20pod05-client%20resource%20usage/17.png)
+
+Kemudian tambahkan beberapa panel lagi
+
+![](https://github.com/jhodys/elk-stack/blob/main/Screenshots/Visualization%20of%20pod05-client%20resource%20usage/18.png)
+
+![](https://github.com/jhodys/elk-stack/blob/main/Screenshots/Visualization%20of%20pod05-client%20resource%20usage/19.png)
+
+![](https://github.com/jhodys/elk-stack/blob/main/Screenshots/Visualization%20of%20pod05-client%20resource%20usage/20.png)
+
+![](https://github.com/jhodys/elk-stack/blob/main/Screenshots/Visualization%20of%20pod05-client%20resource%20usage/21.png)
+
+![](https://github.com/jhodys/elk-stack/blob/main/Screenshots/Visualization%20of%20pod05-client%20resource%20usage/22.png)
+
+Berikut adalah hasil panel yang baru ditambahkan pada baris kedua dashboard ini
+
+![](https://github.com/jhodys/elk-stack/blob/main/Screenshots/Visualization%20of%20pod05-client%20resource%20usage/23.png)
