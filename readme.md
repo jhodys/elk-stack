@@ -41,3 +41,13 @@ sudo systemctl status elasticsearch
 ```
 
 ![](https://github.com/jhodys/elk-stack/blob/main/Screenshots/Elasticsearch%20install%20%26%20configuration/3.png)
+
+Untuk pengecekan saya menggunakan command berikut untuk mengirimkan HTTP request pada port 9200 di localhost
+
+```
+curl -X GET "localhost:9200/?pretty"
+```
+
+Yang akan memberikan output seperti ini
+
+![](https://github.com/jhodys/elk-stack/blob/main/Screenshots/Elasticsearch%20install%20%26%20configuration/4.png)
