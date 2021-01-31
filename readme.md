@@ -118,3 +118,70 @@ ssh -v -L 5601:127.0.0.1:5601 student@138.201.60.4 -p 10510
 Kemudian buka halaman website http://localhost:5601 pada browser
 
 ![](https://github.com/jhodys/elk-stack/blob/main/Screenshots/Kibana%20install%20%26%20configuration/6.png)
+
+## Step 4: Instalasi Logstash pada pod05-elk
+
+Gunakan command berikut untuk melakukan instalasi
+
+```
+sudo apt install logstash -y
+```
+
+![](https://github.com/jhodys/elk-stack/blob/main/Screenshots/Logstash%20installation/1.png)
+
+Kemudian jalankan Logstash dengan perintah berikut
+
+```
+sudo systemctl start kibana
+sudo systemctl status kibana
+```
+
+![](https://github.com/jhodys/elk-stack/blob/main/Screenshots/Logstash%20installation/2.png)
+
+## Step 5: Instalasi & Konfigurasi Metricbeat pada pod05-client
+
+Gunakan command berikut untuk melakukan instalasi
+
+```
+curl -L -O https://artifacts.elastic.co/downloads/beats/metricbeat/metricbeat-7.10.2-amd64.deb
+sudo dpkg -i metricbeat-7.10.2-amd64.deb
+```
+
+![](https://github.com/jhodys/elk-stack/blob/main/Screenshots/Metricbeat%20install%20%26%20configuration/1.png)
+
+Kemudian konfigurasi file metricbeat.yml untuk mengkoneksikan Metricbeat ke Kibana & Elasticsearch
+
+```
+sudo nano /etc/metricbeat/metricbeat.yml
+```
+Konfigurasi Kibana host
+
+![](https://github.com/jhodys/elk-stack/blob/main/Screenshots/Metricbeat%20install%20%26%20configuration/2.png)
+
+Konfigurasi Elasticsearch host
+
+![](https://github.com/jhodys/elk-stack/blob/main/Screenshots/Metricbeat%20install%20%26%20configuration/3.png)
+
+Selanjutnya load asset Metricbeat menggunakan command berikut
+
+```
+sudo metricbeat setup -e
+```
+
+![](https://github.com/jhodys/elk-stack/blob/main/Screenshots/Metricbeat%20install%20%26%20configuration/4.png)
+
+Dan tunggu sampai output loaded dashboard pastikan Elasticsearch & Kibana sudah berjalan pada pod05-elk
+
+![](https://github.com/jhodys/elk-stack/blob/main/Screenshots/Metricbeat%20install%20%26%20configuration/5.png)
+
+Jalankan Metricbeat
+
+```
+sudo systemctl enable metricbeat
+sudo systemctl start metricbeat
+sudo systemctl status metricbeat
+```
+
+Untuk melihat hasil dashboard yang sudah di load buka halaman http://localhost:5601/app/kibana#/dashboard/Metricbeat-system-overview-ecs. Dashboard ini menampilkan hasil monitoring pada pod05-client secara instan tanpa perlu membuat dashboard.
+
+![](https://github.com/jhodys/elk-stack/blob/main/Screenshots/Metricbeat%20install%20%26%20configuration/6.png)
