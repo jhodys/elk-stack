@@ -132,8 +132,8 @@ sudo apt install logstash -y
 Kemudian jalankan Logstash dengan perintah berikut
 
 ```
-sudo systemctl start kibana
-sudo systemctl status kibana
+sudo systemctl start logstash
+sudo systemctl status logstash
 ```
 
 ![](https://github.com/jhodys/elk-stack/blob/main/Screenshots/Logstash%20installation/2.png)
